@@ -1,0 +1,21 @@
+version: "3.9"
+
+services:
+  backend:
+    build: .
+    container_name: flaskbackend
+    image: flaskbackend:v1
+    ports:
+      - "5000:5000"
+    depends_on:
+      - mongo
+
+  mongo:
+    container_name: mongo
+    image: mongo:4.2.0
+    environment:
+      MONGO_INITDB_DATABASE: flask-database
+    ports:
+      - "1048:27017"
+
+
