@@ -8,3 +8,5 @@ Description of the project:
 - Dockerized Flask Application
 - Two services running - Flask Application and MongoDB database with Docker Compose
 
+# To Run the application in local machine
+Clone the git repository and run the command: docker-compose up in your local machine.
